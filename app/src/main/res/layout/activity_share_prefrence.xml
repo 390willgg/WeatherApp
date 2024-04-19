@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.SharePrefrence">
+        <TextView
+            android:id="@+id/etName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:text="Shared Preferences Demo"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/etEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etName"
+            android:layout_alignStart="@+id/etName"
+            android:layout_alignEnd="@+id/etName"
+            android:layout_marginStart="-41dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="-43dp"
+            android:hint="Enter your Name"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/eEdit2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etEdit"
+            android:layout_alignStart="@+id/etEdit"
+            android:layout_alignEnd="@+id/etEdit"
+            android:layout_marginStart="-1dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="1dp"
+            android:hint="Enter your Age"
+            android:inputType="number"
+            android:padding="10dp" />
+    </RelativeLayout>
