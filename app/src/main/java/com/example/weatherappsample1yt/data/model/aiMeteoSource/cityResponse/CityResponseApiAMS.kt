@@ -5,8 +5,8 @@ import com.example.weatherappsample1yt.data.model.format.CityWeatherData
 import com.example.weatherappsample1yt.data.model.format.DataItemCity
 import com.google.gson.annotations.SerializedName
 
-class CityResponseApiAMS : ArrayList<com.example.weatherappsample1yt.data.model.aiMeteoSource.cityResponse.CityResponseApiAMS.CityResponseAPI_Ai_MeteoSourceItem>(){
-    data class CityResponseAPI_Ai_MeteoSourceItem(
+class CityResponseApiAMS : ArrayList<CityResponseApiAMS.CityResponseAPIAIMeteoSourceItem>(){
+    data class CityResponseAPIAIMeteoSourceItem(
         @SerializedName("adm_area1")
         val admArea1: String?,
         @SerializedName("adm_area2")

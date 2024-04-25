@@ -1,7 +1,8 @@
 package com.example.weatherappsample1yt.presentation.di.core
 
+import com.example.weatherappsample1yt.data.repository.city.getAMSCityListRepositoryImpl
 import com.example.weatherappsample1yt.data.repository.city.getOWCityListRepositoryImpl
-import com.example.weatherappsample1yt.data.repository.city.getWACityListRemoteDataSourceImpl
+import com.example.weatherappsample1yt.data.repository.city.getWACityListRepositoryImpl
 import com.example.weatherappsample1yt.data.repository.weather.getAMSWeatherRepositoryImpl
 import com.example.weatherappsample1yt.data.repository.weather.getOWWeatherRepositoryImpl
 import com.example.weatherappsample1yt.data.repository.weather.getWAWeatherRepositoryImpl
@@ -40,7 +41,7 @@ class RepositoryModule {
     @Named("WACity")
     fun provideWACityListRepository(
     ): CityRepository {
-        return getWACityListRemoteDataSourceImpl()
+        return getWACityListRepositoryImpl()
     }
 
     @Singleton
@@ -56,6 +57,6 @@ class RepositoryModule {
     @Named("AMSCity")
     fun provideAMSCityListRepository(
     ): CityRepository {
-        return getOWCityListRepositoryImpl()
+        return getAMSCityListRepositoryImpl()
     }
 }

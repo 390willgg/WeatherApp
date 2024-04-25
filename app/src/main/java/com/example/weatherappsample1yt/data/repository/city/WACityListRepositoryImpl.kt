@@ -26,6 +26,6 @@ private class WACityListRepositoryImpl: CityRepository {
     }
 }
 
-fun getWACityListRemoteDataSourceImpl(): CityRepository {
+fun getWACityListRepositoryImpl(): CityRepository {
     return WACityListRepositoryImpl()
 }

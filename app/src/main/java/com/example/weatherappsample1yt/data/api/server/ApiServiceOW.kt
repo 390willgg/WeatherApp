@@ -3,7 +3,6 @@ package com.example.weatherappsample1yt.data.api.server
 import com.example.weatherappsample1yt.data.model.openWeather.CityResponseApiOW
 import com.example.weatherappsample1yt.data.model.openWeather.currentResponse.CurrentResponseApiOW
 import com.example.weatherappsample1yt.data.model.openWeather.forecastResponse.ForecastResponseApiOW
-import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
 

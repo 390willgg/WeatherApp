@@ -32,14 +32,14 @@ fun ForecastResponseApiOW.toForecastWeatherData(): ForecastWeatherData {
             precipitation = data.rain?.h,
             uvIndex = null // UV index data is not available in the current API response
         )
-        } ?: listOf()
+    } ?: listOf()
 
-        return ForecastWeatherData(
-            country = this.city?.country,
-            city = this.city?.name,
-            lat = this.city?.coord?.lat,
-            lon = this.city?.coord?.lon,
-            timezone = this.city?.timezone.toString(),
-            forecasts = ForecastDetail(hourlyDetails = hourlyDetails, dailyDetails = null)
-        )
-    }
+    return ForecastWeatherData(
+        country = this.city?.country,
+        city = this.city?.name,
+        lat = this.city?.coord?.lat,
+        lon = this.city?.coord?.lon,
+        timezone = this.city?.timezone.toString(),
+        forecasts = ForecastDetail(hourlyDetails = hourlyDetails, dailyDetails = null)
+    )
+}
