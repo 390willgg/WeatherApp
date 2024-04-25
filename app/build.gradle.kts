@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-parcelize")
     kotlin("kapt")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -42,6 +43,16 @@ android {
 
 kapt {
     correctErrorTypes = true
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.name)
+        arg("kapt.module.generated", "$projectDir/generated/kaptKotlin/")
+    }
+}
+
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.name)
+    }
 }
 //
 dependencies{
@@ -56,12 +67,6 @@ dependencies{
     // ViewModel
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.lifecycle.livedata.ktx)
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
-    implementation(libs.androidx.gridlayout)
-    implementation(libs.support.annotations)
-    implementation(libs.androidx.annotation)
-    kapt(libs.androidx.lifecycle.compiler)
 
     //gson
     implementation (libs.gson)
@@ -70,10 +75,20 @@ dependencies{
     implementation (libs.blurview)
     implementation (libs.weatherview)
 
+    implementation(libs.symbol.processing.api)
+
     implementation (libs.play.services.location)
     implementation (libs.androidx.viewpager2)
     implementation (libs.androidx.activity.ktx)
     implementation (libs.androidx.fragment.ktx)
+
+    ksp(libs.dagger.compiler)
+    implementation(libs.dagger)
+    implementation(libs.androidx.databinding.runtime)
+    ksp(libs.dagger.compiler)
+    implementation(libs.dagger.android)
+    implementation(libs.dagger.android.support) // if you use the support libraries
+    ksp(libs.dagger.android.processor)
 
     implementation (libs.lottie)
     implementation (libs.material)

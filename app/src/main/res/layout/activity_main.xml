@@ -7,7 +7,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:scrollbars="none"
-        tools:context=".activity.MainActivity">
+        tools:context=".presentation.view.main.MainActivity">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

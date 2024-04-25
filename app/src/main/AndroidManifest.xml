@@ -15,6 +15,7 @@
     </queries>
 
     <application
+        android:name=".presentation.App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -22,16 +23,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.WeatherAppSample1YT"
-        tools:targetApi="31">
+        android:theme="@style/Theme.WeatherAppSample1YT">
         <activity
-            android:name=".activity.SharePrefrence"
+            android:name=".presentation.view.SharePrefrence"
             android:exported="false" />
         <activity
-            android:name=".activity.CityActivity"
+            android:name=".presentation.view.city.CityActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".presentation.view.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,11 +1,12 @@
 [versions]
-agp = "8.4.0-beta01"
+agp = "8.5.0-alpha06"
+daggerCompiler = "2.51.1"
 fragmentKtx = "1.6.2"
 glide = "4.16.0"
 blurview = "version-2.0.3"
 gson = "2.10.1"
-kotlin = "1.9.0"
-coreKtx = "1.12.0"
+kotlin = "1.9.23"
+coreKtx = "1.13.0"
 junit = "4.13.2"
 junitVersion = "1.1.5"
 espressoCore = "3.5.1"
@@ -13,31 +14,30 @@ appcompat = "1.6.1"
 lifecycleViewmodelKtx = "2.7.0"
 lottieVersion = "3.4.0"
 material = "1.11.0"
-activity = "1.8.2"
+activity = "1.9.0"
 constraintlayout = "2.1.4"
 okhttp = "4.12.0"
 playServicesLocation = "21.2.0"
-retrofit = "2.10.0"
+retrofit = "2.11.0"
+symbolProcessingApi = "1.7.10-1.0.6"
 viewpager2 = "1.0.0"
 weatherview = "3.0.0"
-lifecycleViewmodelCompose = "2.7.0"
-navigationFragmentKtx = "2.7.7"
-navigationUiKtx = "2.7.7"
-gridlayout = "1.0.0"
-supportAnnotations = "28.0.0"
-annotation = "1.7.1"
+databindingRuntime = "8.3.2"
 
 [libraries]
 androidx-activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activity" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "fragmentKtx" }
-androidx-lifecycle-compiler = { module = "androidx.lifecycle:lifecycle-compiler", version.ref = "lifecycleViewmodelKtx" }
 androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycleViewmodelKtx" }
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
 androidx-viewpager2 = { module = "androidx.viewpager2:viewpager2", version.ref = "viewpager2" }
-androidx-x-3-1 = { module = "androidx.lifecycle.lifecycle-viewmodel-ktx:2.3.1" }
 blurview = { module = "com.github.Dimezis:BlurView", version.ref = "blurview" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+dagger = { module = "com.google.dagger:dagger", version.ref = "daggerCompiler" }
+dagger-android = { module = "com.google.dagger:dagger-android", version.ref = "daggerCompiler" }
+dagger-android-processor = { module = "com.google.dagger:dagger-android-processor", version.ref = "daggerCompiler" }
+dagger-android-support = { module = "com.google.dagger:dagger-android-support", version.ref = "daggerCompiler" }
+dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "daggerCompiler" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -52,13 +52,9 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
 play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "playServicesLocation" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+symbol-processing-api = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "symbolProcessingApi" }
 weatherview = { module = "com.github.MatteoBattilana:WeatherView", version.ref = "weatherview" }
-androidx-lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelCompose" }
-androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
-androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
-androidx-gridlayout = { group = "androidx.gridlayout", name = "gridlayout", version.ref = "gridlayout" }
-support-annotations = { group = "com.android.support", name = "support-annotations", version.ref = "supportAnnotations" }
-androidx-annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
+androidx-databinding-runtime = { group = "androidx.databinding", name = "databinding-runtime", version.ref = "databindingRuntime" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
